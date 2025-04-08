@@ -1,5 +1,5 @@
 {% set name = "deepcs" %}
-{% set version = "0.2.9" %}
+{% set version = "0.2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/deepcs-{{ version }}.tar.gz
-  sha256: b4f061a3b623ab4bb49a53e01c9a68c5ece3f0064b86fa1388ffcb66112d9966
+  sha256: 76d9d4015378eba81b8eaec28d818b7f71df8cd3fb248e6122a52f1f567489c8
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
